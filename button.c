@@ -187,3 +187,18 @@ BUTTON_STATE ICACHE_FLASH_ATTR Button_Run(BUTTON* b)
     
     return state;
 }
+/**
+ * 
+ * @param b
+ * @return 
+ */
+int ICACHE_FLASH_ATTR Button_Get(BUTTON* b)
+{
+    bool bb = gpio_read(b->m_Pin);
+
+    if(bb != b->m_NOState) {
+        return 1;
+    }
+
+    return 0;
+}

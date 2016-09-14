@@ -95,6 +95,12 @@ int Button_SetLongPress(BUTTON* b, unsigned long ms);
  * @return 
  */
 BUTTON_STATE Button_Run(BUTTON* b);
+/**
+ * 
+ * @param b
+ * @return 
+ */
+int Button_Get(BUTTON* b);
 
 #ifdef	__cplusplus
 }
